@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression as LR
 from sklearn.isotonic import IsotonicRegression
 from sklearn.model_selection import train_test_split
 
-class CaliForest:
+class CaliForests:
 
     def __init__(self,
                 n_estimators=30,

@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(packages=find_packages(),
-    name="cliforest",
+    name="califorest",
     version="0.0.1",
     description="TBD",
     long_description=long_description,

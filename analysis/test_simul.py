@@ -10,15 +10,15 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
-from califorest.califorest import CaliForest
-from califorest.rc30 import RC30
+from califorests import CaliForests
+from califorests import RC30
 
 
 n_estimators = 30
 max_depth = 5
 min_samples_split = 3
 min_samples_leaf = 1
-models = {"califorest": CaliForest(n_estimators=n_estimators,
+models = {"califorests": CaliForests(n_estimators=n_estimators,
                                     max_depth=max_depth, 
                                     min_samples_split=min_samples_split,
                                     min_samples_leaf=min_samples_leaf),
@@ -45,9 +45,9 @@ def get_mortdata():
     return X, y
 
 #X, y = load_breast_cancer(return_X_y=True)
-#X, y = make_hastie_10_2(n_samples=1000)
-#y[y<0] = 0
-X, y = get_mortdata()
+X, y = make_hastie_10_2(n_samples=1000)
+y[y<0] = 0
+#X, y = get_mortdata()
 imp = SimpleImputer(missing_values=np.nan, strategy="mean")
 np.random.seed(1)
 

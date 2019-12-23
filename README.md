@@ -1,5 +1,13 @@
-# CaliForest
+# CaliForests
 
-Calibrated Random Forest
+**Cali**brated Random **Forests**
+
+## Theory
+
+CaliForests
+
+
+
+
 
 
