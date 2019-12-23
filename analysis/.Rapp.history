@@ -1,0 +1,149 @@
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")
+df
+str(df)
+ggplot(df, aes(x=factor(test_size), y=brier, group=model_name)) + geom_boxplot()
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot()
+ggplot(df, aes(x=as.factor(test_size), y=auc, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=auc, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=auc, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=auc, colour=model_name)) + geom_boxplot()
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot()
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=auc, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
+library(ggplot2)#
+#
+df <- read.csv("res_simul.csv")#
+#
+ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() #
+ggsave("fig_simul.png", width=8, height=6)
