@@ -1,6 +1,13 @@
 library(ggplot2)
 
-df <- read.csv("res_simul.csv")
+fn <- "results/breast_cancer.csv"
+#fn <- "results/hastie.csv"
+df <- read.csv(fn)
 
-ggplot(df, aes(x=as.factor(test_size), y=brier, colour=model_name)) + geom_boxplot() 
-ggsave("fig_simul.png", width=8, height=6)
+ggplot(df, aes(x=model, y=reliability_large, colour=model)) + geom_boxplot() + facet_wrap(n_estimators~max_depth) 
+
+
+ggplot(df, aes(x=model, y=hosmer_lemshow, colour=model)) + geom_boxplot() + facet_wrap(n_estimators~max_depth) 
+
+ggplot(df, aes(x=model, y=brier, colour=model)) + geom_boxplot() + facet_wrap(n_estimators~max_depth) 
+

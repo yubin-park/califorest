@@ -53,7 +53,7 @@ class CaliForests:
         z_hat = np.nanmean(Y_oob[n_oob > thr,:], axis=1)
         z_std = np.nanstd(Y_oob[n_oob > thr,:], axis=1)
         z_std_mean = np.mean(z_std)
-        z_weight = 1/(z_std + 0.1 * z_std_mean)
+        z_weight = 1/(z_std + 1e-2 * z_std_mean)
 
         if self.ctype=="logistic":
             self.calibrator.fit(z_hat[:,np.newaxis], z_true, z_weight)

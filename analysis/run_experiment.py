@@ -34,16 +34,16 @@ def read_data(dataset, random_seed):
                                                     test_size=0.3)
     elif dataset == "mimic3_mort_hosp":
         X_train, X_test, y_train, y_test = mimic.extract(random_seed, 
-                                                        "mosrt_hosp")
+                                                        "mort_hosp")
     elif dataset == "mimic3_mort_icu":
         X_train, X_test, y_train, y_test = mimic.extract(random_seed, 
-                                                        "mosrt_hosp")
-    elif dataset == "mimic3_los3":
+                                                        "mort_icu")
+    elif dataset == "mimic3_los_3":
         X_train, X_test, y_train, y_test = mimic.extract(random_seed, 
-                                                        "los3")
-    elif dataset == "mimic3_los7":
+                                                        "los_3")
+    elif dataset == "mimic3_los_7":
         X_train, X_test, y_train, y_test = mimic.extract(random_seed, 
-                                                        "los7")
+                                                        "los_7")
  
     return X_train, X_test, y_train, y_test
 
@@ -94,18 +94,22 @@ def run(dataset, random_seed):
             t_start = time.time()
             model.fit(X_train, y_train)
             t_elapsed = time.time() - t_start
-            print("[info] {} {} {} {}: {:.3f} sec".format(dataset,
-                        nest, mdep, name, t_elapsed))
-
             y_pred = model.predict_proba(X_test)[:,1]
 
             score_auc = roc_auc_score(y_test, y_pred)
             score_hl = em.hosmer_lemeshow(y_test, y_pred)
             score_sh = em.spiegelhalter(y_test, y_pred)
             score_b, score_bs = em.scaled_Brier(y_test, y_pred)
+            rel_small, rel_large = em.reliability(y_test, y_pred)
 
             row = [dataset, name, nest, mdep, random_seed, 
-                   score_auc, score_b, score_bs, score_hl, score_sh] 
+                   score_auc, score_b, score_bs, score_hl, score_sh,
+                   rel_small, rel_large] 
+
+            print(("[info] {} {} {} {}: {:.3f} sec & "+
+                    "BS {:.3f}").format(dataset,
+                        nest, mdep, name, t_elapsed, score_b))
+
             output.append(row)
 
     return output
@@ -120,7 +124,8 @@ if __name__ == "__main__":
 
     output = [["dataset", "model", "n_estimators", "max_depth", 
                 "random_seed", "auc", "brier", "brier_scaled", 
-                "hosmer_lemshow", "speigelhalter"]]
+                "hosmer_lemshow", "speigelhalter",
+                "reliability_small", "reliability_large"]]
     for rs in range(10):
         output += run(args.dataset, rs)
         
