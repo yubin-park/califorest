@@ -1,3 +1,6 @@
+# Script modified from: https://github.com/MLforHealth/MIMIC_Extract/blob/master/notebooks/Baselines%20for%20Mortality%20and%20LOS%20prediction%20-%20Sklearn.ipynb
+
+
 import pandas as pd
 import numpy as np
 import pickle
