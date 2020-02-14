@@ -1,6 +1,6 @@
-# CaliForests
+# CaliForest
 
-**Cali**brated Random **Forests**
+**Cali**brated Random **Forest**
 
 This Python package implements the CaliForest algorithm presented in [ACM CHIL 2020](https://www.chilconference.org/).
 
