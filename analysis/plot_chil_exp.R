@@ -23,3 +23,4 @@ theme(axis.text.x = element_text(angle=90, hjust=1),
 	legend.position="none") + 
 scale_color_manual(values=palette5)
 
+ggsave("hastie-results.png", width=8, height=5)
