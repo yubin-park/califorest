@@ -40,7 +40,7 @@ y_pred = model.predict_proba(X_test)[:,1]
 Calibration metrics:
 
 ```python
-from califorest import eval_metrics as em
+from califorest import metrics as em
 
 score_auc = roc_auc_score(y_test, y_pred)
 score_hl = em.hosmer_lemeshow(y_test, y_pred)

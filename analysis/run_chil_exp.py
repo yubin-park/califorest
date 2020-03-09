@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import PolynomialFeatures
 from califorest import CaliForest
 from califorest import RC30
-from califorest import eval_metrics as em
+from califorest import metrics as em
 import mimic_extract as mimic
 
 def read_data(dataset, random_seed):
@@ -98,7 +98,7 @@ def run(dataset, random_seed):
         score_auc = roc_auc_score(y_test, y_pred)
         score_hl = em.hosmer_lemeshow(y_test, y_pred)
         score_sh = em.spiegelhalter(y_test, y_pred)
-        score_b, score_bs = em.scaled_Brier(y_test, y_pred)
+        score_b, score_bs = em.scaled_brier_score(y_test, y_pred)
         rel_small, rel_large = em.reliability(y_test, y_pred)
 
         row = [dataset, name, random_seed, 

@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import sklearn.metrics as skm
-import tqdm
 from scipy.stats import chi2
 from scipy.stats import norm
 
@@ -70,7 +69,7 @@ def spiegelhalter(y_true, y_score):
 
     return p_value
 
-def scaled_Brier(y_true, y_score):
+def scaled_brier_score(y_true, y_score):
     brier = skm.brier_score_loss(y_true, y_score)
     # calculate the mean of the probability
     p = np.mean(y_true)  

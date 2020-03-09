@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import PolynomialFeatures
 from califorest import CaliForest
 from califorest import RC30
-from califorest import eval_metrics as em
+from califorest import metrics as em
 
 test_size = 0.3
 n_estimators = 300
@@ -36,7 +36,7 @@ y_pred = model.predict_proba(X_test)[:,1]
 score_auc = roc_auc_score(y_test, y_pred)
 score_hl = em.hosmer_lemeshow(y_test, y_pred)
 score_sh = em.spiegelhalter(y_test, y_pred)
-score_b, score_bs = em.scaled_Brier(y_test, y_pred)
+score_b, score_bs = em.scaled_brier_score(y_test, y_pred)
 rel_small, rel_large = em.reliability(y_test, y_pred)
 
 print(f"AUC: {score_auc}")
